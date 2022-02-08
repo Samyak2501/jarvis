@@ -10,7 +10,7 @@ import wikipedia
 import requests
 from bs4 import BeautifulSoup
 from wikipedia.wikipedia import search
-# from pywhatkit import playonyt
+from pywhatkit import playonyt
 
 
 #greeting message
@@ -94,20 +94,20 @@ while "SLEEP" not in it:
  elif("WHO ARE YOU" in it or "WHO ARE YOU?" == it):
      system('say i am proton ')
      print("i am proton")   
-#  elif("SONG" in it):
+ elif("SONG" in it):
 
-#     song = ["safe and sound", "Cartoon-on and on", "Jim Yosef - Firefly ", "Virtual Riot - Purple Dragons", "Luis Fonsi - Despacito", "Downlink - Absolute Fire"]
-#     x = random.choice(song)
+    song = ["safe and sound", "Cartoon-on and on", "Jim Yosef - Firefly ", "Virtual Riot - Purple Dragons", "Luis Fonsi - Despacito", "Downlink - Absolute Fire"]
+    x = random.choice(song)
      
-#     play = it.replace("SONG", x)
-#     system('say Playing random song for you')
-#     print("Playing random song for you")
-#     playonyt(play)
-#  elif ("PLAY" in it):
-#      video = it.replace("PLAY", "")
-#      system('say playing on youtube' + video)
-#      print("playing on youtube" + video)
-#      playonyt(video) 
+    play = it.replace("SONG", x)
+    system('say Playing random song for you')
+    print("Playing random song for you")
+    playonyt(play)
+ elif ("PLAY" in it):
+     video = it.replace("PLAY", "")
+     system('say playing on youtube' + video)
+     print("playing on youtube" + video)
+     playonyt(video) 
       
  elif("WHAT IS MY NAME" in it):
      system('say sam. ')
