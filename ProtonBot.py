@@ -65,7 +65,7 @@ while "SLEEP" not in it:
      print("my name is proton")
  elif ("WEATHER" in it):
      place = ("ujjian")
-     search = f"wheather in {place}"
+     search = "wheather in %s" % (place)
 
      url1 = f"https://www.google.com/search?q={search}"
      q2 = requests.get(url1)
@@ -73,8 +73,8 @@ while "SLEEP" not in it:
      soup = BeautifulSoup(q2.text, "html.parser")
      update = soup.find("div", class_="BNeawe").text
      
-     system(f"say {search} now is {update}")
-     print(f"{search} now is {update}")
+     system("say %s now is %s" % (search, update))
+     print("%s now is %s" % (search, update))
 
  elif ("ARE YOU HUMAN" in it):
      system('say i am not human i am robot')
